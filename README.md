@@ -4,8 +4,6 @@ An end-to-end full-stack AI Customer Support Assistant application built with **
 
 ---
 
-## 💯 Internship Assignment Evaluation Summary (100 / 100 Marks)
-
 | Evaluation Criteria | Max Marks | Status | Implementation Details |
 | :--- | :---: | :---: | :--- |
 | **Frontend & UX** | **20** | ✅ **Complete** | Responsive live chat widget, name onboarding modal, real-time typing indicator (`Kiara is typing...`), custom React Portal dialogs (`ConfirmModal`), prefilled question grid. |
