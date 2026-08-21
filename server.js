@@ -15,7 +15,7 @@ const app = express();
 
 // Core Middleware (Dynamic CORS for Netlify Frontend & Localhost)
 const corsOptions = {
-  origin: process.env.CLIENT_URL || 'kiaaraa.netlify.app',
+  origin: [process.env.CLIENT_URL || 'http://localhost:3000', 'https://kiaaraa.netlify.app'],
   credentials: true
 };
 app.use(cors(corsOptions));
