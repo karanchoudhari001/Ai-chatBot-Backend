@@ -81,7 +81,13 @@ const generateSupportResponse = async (history = [], currentMessage) => {
 
     return responseText.trim();
   } catch (error) {
-    console.error('[AI Service Error]', error);
+    console.error('[AI Service Error] Full error details:');
+    console.error('  Message:', error.message);
+    console.error('  Status:', error.status || 'N/A');
+    console.error('  StatusText:', error.statusText || 'N/A');
+    console.error('  Error details:', JSON.stringify(error.errorDetails || error.response?.data || 'N/A'));
+    console.error('  API Key loaded:', !!process.env.GEMINI_API_KEY);
+    console.error('  API Key prefix:', process.env.GEMINI_API_KEY ? process.env.GEMINI_API_KEY.substring(0, 10) + '...' : 'NOT SET');
     // Return a fallback user-friendly message rather than crashing
     return "I'm sorry, I encountered a temporary network or API issue while processing your request. Please try asking again.";
   }
